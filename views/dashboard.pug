@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Video Dashboard
+  p
+    a(href="/video/dashboard/all") All Videos |
+    a(href="/video/new_video") Add Video
+
+  each video in videos
+    div(style="margin: 15px 0;")
+      h3= video.title
+      iframe(width="320" height="180" src=video.url frameborder="0" allowfullscreen)

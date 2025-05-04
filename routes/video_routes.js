@@ -18,7 +18,9 @@ router.post('/new', (req, res) => {
     return res.render('login');
   }
 
-  const { url, title } = req.body;
+  const { 
+    url, title 
+  } = req.body;
 
   let video_embed_url = url;
   if (url.includes('watch?v=')) {
